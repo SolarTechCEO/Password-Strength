@@ -48,25 +48,45 @@ Loads `common_passwords.txt` for offline weak-password detection.
 ```
 
 ## 🔧 Installation & Compilation
+
 ### Requirements
-- C++11-compatible compiler
+- A C++11 (or newer) compatible compiler  
+- `make` installed (macOS/Linux by default; MSYS2/MinGW on Windows)
 
-### Linux/macOS
+### Build (Linux/macOS/Windows)
 ```
-g++ src/main.cpp src/PasswordAnalyzer.cpp -Iinclude -o PasswordAnalyzer
-```
-
-### Windows
-```
-g++ src\main.cpp src\PasswordAnalyzer.cpp -Iinclude -o PasswordAnalyzer.exe
+make
 ```
 
-## ▶️ Usage
+### Clean the build
+```
+make clean
+```
+
+### Run the program
+```
+make run
+```
+
+Or manually:
 ```
 ./PasswordAnalyzer
 ```
+(Windows: `PasswordAnalyzer.exe`)
 
-Example output:
+## ▶️ Usage Example
+
+```
+=========================================
+   Password Strength Analyzer
+=========================================
+1) Analyze a password
+2) Generate a strong password
+3) Quit
+Choose an option:
+```
+
+Example analysis:
 ```
 Score: 82/100
 Rating: Strong
@@ -74,18 +94,21 @@ Feedback:
 - Good length! Longer passwords are harder to crack.
 ```
 
-Password generation:
+Generated password:
 ```
-Generated password: Fg9@hZ7m!vLp3&Ds
+Fg9@hZ7m!vLp3&Ds
 ```
 
 ## 🧩 What Was Created/Improved
 This project was designed from scratch as a portfolio-quality cybersecurity tool demonstrating:
-- OOP design
-- File I/O
+- Object-oriented design
 - Real security heuristics
-- Random password generation
-- Clean modular architecture
+- Pattern detection
+- Dictionary-based password checks
+- File I/O handling
+- Strong random password generation
+- Modular architecture using separate headers/source files
+- Professional Makefile-based build system
 
 ## 🚀 Planned Enhancements
 - Entropy calculation  
@@ -94,8 +117,10 @@ This project was designed from scratch as a portfolio-quality cybersecurity tool
 - Policy templates (NIST, PCI-DSS)
 
 ## 📝 License
-MIT or your choice.
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute this software with proper attribution.
+See the accompanying LICENSE file for full details.
 
 ## ❤️ Author
-Nick (SolarTechCEO)   
+Nick C. (SolarTechCEO)
 Lead Developer
